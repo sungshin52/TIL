@@ -63,3 +63,11 @@
 * Git 저장소에 `.gitignore` 파일 생성 후 목록 작성
 * 예시
     ![gitignore](gitignore.png)
+
+***
+
+## git log
+
+* 실행 시 현재 사용 중인 저장소의 모든 변경 이력 출력
+* `--oneline --graph` 명령어 사용 시 커밋의 병합 볼 수 있음
+    ![gitlog](git_log.png)
