@@ -57,3 +57,9 @@
 
 ***
 
+## .gitignore
+
+* 버전 관리 하지 않는 파일/디렉토리 대상
+* Git 저장소에 `.gitignore` 파일 생성 후 목록 작성
+* 예시
+    ![gitignore](gitignore.png)
