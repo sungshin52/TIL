@@ -1,10 +1,13 @@
 # Today I Learned 👀✨
 
-## 🍰 22.12.27
-* [Markdown](markdown.md)
-* [Git command](git_command.md)
+## 🍰 Markdown
+* [Markdown](Markdown/markdown.md)
 
-## 🍮 22.12.28
+***
+
+## 🍮 Git Command & GitHub
 * How to use GitHub?
-* [Git command](git_command.md)
+    * Set [Profile](https://github.com/sungshin52/sungshin52)
+
+* [Git command](Git_command/git_command.md)
     * Still working on . . .
