@@ -248,3 +248,65 @@
             ```python
             print(char, end = ' ')
             ```
+
+</br>
+
+## 10. String Formatting
+
+* **String Interpolation**
+
+    * `%-formatting`
+
+        ```python
+        name = 'Kim'
+        score = 4.5
+
+        print('Hello, %s' % name)   # Hello, Kim
+        print('내 성적은 %d' % score)   # 내 성적은 4
+        print('내 성적은 %f' % score)   # 내 성적은 4.500000
+        ```
+
+    * `f-string`
+
+        ```python
+        name = 'Kim'
+        score = 4.5
+        
+        # Hello, Kim! 성적은 4.5
+        print(f'Hello, {name}! 성적은 {score}')
+
+        # 원주율은 3.14. 반지름이 2일 때 원의 넓이는 12.566368
+        pi = 3.141592
+        print(f'원주율은 {pi:.3}. 반지름이 2일 때 원의 넓이는 {pi*2*2}')
+        ```
+
+</br>
+
+## 11. 형 변환
+
+* **암시적 형 변환**
+
+    * 파이썬 내부적으로 자료형을 변환하는 경우
+
+        ```python
+        True + 3    # 4
+        3 + 5.0     # 8.0
+        3 + 4j + 5  # (8+4j)
+        ```
+
+* **명시적 형 변환**
+
+    * 사용자가 특정 함수를 활용하여 의도적으로 자료형을 변환하는 경우
+
+    * `str*, float ⇨ int`
+
+    * `str*, int ⇨ float`
+
+    * `int, float, list, tuple, dict ⇨ str`
+
+        ```python
+        int('3') + 4    # 7
+        
+        int('3.5') + 5  # ValueError
+
+        float('3.5') + 5    # 8.5
