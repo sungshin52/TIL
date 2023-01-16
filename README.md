@@ -28,3 +28,5 @@
     [[Chap 3](Python/Chap3/Chap3.md)] Function
 
 * [Practice Code](https://github.com/sungshin52/KDT_Practice)
+
+* [Algorithm](https://github.com/sungshin52/algorithm)
