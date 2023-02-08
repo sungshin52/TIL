@@ -30,3 +30,13 @@
 * [Practice Code](https://github.com/sungshin52/KDT_Practice)
 
 * [Algorithm](https://github.com/sungshin52/algorithm)
+
+</br>
+
+## 🍨 Database
+
+* How to use MySQL?
+
+    * [Guide](Database/guide.md)
+
+* [Term Definition](Database/query.md)
