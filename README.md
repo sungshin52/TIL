@@ -40,3 +40,5 @@
     * [Guide](Database/guide.md)
 
 * [Term Definition](Database/query.md)
+
+* [Practice Code](Database/Practice/)
