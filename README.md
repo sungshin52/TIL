@@ -42,3 +42,11 @@
 * [Term Definition](Database/query.md)
 
 * [Practice Code](Database/Practice/)
+
+* [ERD](Database/ERD/)
+
+</br>
+
+## 💌 HTML/CSS
+
+* [Practice Code](Web/Practice/)
