@@ -47,6 +47,8 @@
 
 </br>
 
-## 💌 HTML/CSS
+## 💌 HTML/CSS/JavaScript
 
 * [Practice Code](Web/Practice/)
+
+* [Project](Web/Project/)
