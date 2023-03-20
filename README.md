@@ -52,3 +52,9 @@
 * [Practice Code](Web/Practice/)
 
 * [Project](Web/Project/)
+
+</br>
+
+## 🍡 Django
+
+* [Setting Guideline](Django/Setting_Guideline.md)
