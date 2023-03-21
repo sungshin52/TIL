@@ -58,3 +58,5 @@
 ## 🍡 Django
 
 * [Setting Guideline](Django/Setting_Guideline.md)
+
+* [Practice Code](Django/Practice/)
