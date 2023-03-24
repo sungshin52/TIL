@@ -109,3 +109,71 @@
 5. articles 앱 폴더 내 templates 폴더 작성
 
 6. templates 폴더 내 템플릿 페이지 작성
+
+</br>
+
+## 모델 관리 가이드라인
+
+1. 모델 마이그레이션
+
+    * 앱 내 models.py에 모델 작성
+
+        ```python
+        # todos/models.py
+        from django.db import models
+
+        # Create your models here.
+        class Todo(models.Model):
+            content = models.CharField(max_length = 80)
+            completed = models.BooleanField(default = False)
+            priority = models.IntegerField(default = 3)
+            created_at = models.DateTimeField(auto_now_add = True)
+            deadline = models.DateTimeField(null = True)
+        ```
+
+    * 마이그레이션 수행
+
+        ```bash
+        $python manage.py makemigrations
+        $python manage.py migrate
+        ```
+
+2. 모델 필드 추가
+
+    * 1 과 같은 과정 수행
+
+    * 기존 테이블이 존재하기 때문에 필드 추가시 필드의 기본 값 설정 필요
+
+3. 관리자 계정 생성
+
+    ```bash
+    $python manage.py createsuperuser
+    ```
+
+    * username, e-mail (선택사항), password 입력하여 admin 계정 생성
+
+4. 관리자 페이지 모델 등록
+
+    * App 폴더 내부에 있는 admin.py에 모델 클래스 등록
+
+    ```python
+    from django.contrib import admin
+    from .models import Todo
+    # Register your models here.
+
+    admin.site.register(Todo)
+    ```
+
+5. 관리자 페이지 접속
+
+    * http://127.0.0.1:8000/admin/ 접속
+
+    * 3의 username, password로 로그인
+
+    * db.sqlite3의 `auth_user`에 계정 등록되었는지 확인
+
+    * 모델 테스트 (삽입, 수정, 삭제 등)
+
+6. 데이터베이스 파일 `db.sqlite3` 접근
+
+    * `db.sqlite3` 파일 접속하여 5의 모델 테스트가 반영되었는지 확인
