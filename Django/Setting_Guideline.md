@@ -177,3 +177,34 @@
 6. 데이터베이스 파일 `db.sqlite3` 접근
 
     * `db.sqlite3` 파일 접속하여 5의 모델 테스트가 반영되었는지 확인
+
+</br>
+
+## ORM 사용
+
+1. 외부 라이브러리 설치
+
+    ```bash
+    $pip install ipython
+    $pip install django-extensions
+    ```
+
+2. `settings.py`의 `INSTALLED_APPS`에 추가
+
+    ```python
+    #settings.py
+
+    INSTALLED_APPS = [
+        'articles',
+        'django_extensions',
+    ...,
+    ]
+    ```
+
+3. `pip freeze > requirements.txt` 수행
+
+4. `shell plus` 진입하기
+
+    ```bash
+    $python manage.py shell_plus
+    ```
