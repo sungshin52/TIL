@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="{% url 'todos:update' todo.pk %}" method="POST" style="margin:10px">
+        {% csrf_token %}
+        <div class="form-group mb-2 col-lg-4">
+            <label for="title">할 일 제목</label>
+            <input class="form-control" type="text" name="title" id="title" value="{{ todo.title }}">
+        </div>
+        <div class="form-group mb-2 col-lg-4">
+            <label for="content">할 일 내용</label>
+            <textarea class="form-control" name="content" id="content">{{ todo.content }}</textarea>
+        </div>
+        <div class="form-group mb-2 col-lg-4">
+            <label for="priority">우선순위</label>
+            <input class="form-control" type="number" name="priority" id="title" value="{{ todo.priority }}">
+        </div>
+        <div class="form-group mb-2 col-lg-4">
+            <label for="deadline">마감기한</label>
+            <input class="form-control" type="date" name="deadline" id="deadline" value="{{ todo.deadline|date:"Y-m-d" }}">
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Edit</button>
+    </form>
+    <hr>
+    <a href='{% url 'todos:index' %}' style="margin:10px">홈으로</a>
+{% endblock content %}

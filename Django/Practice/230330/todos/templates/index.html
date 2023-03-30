@@ -1,0 +1,15 @@
+{% block content %}
+    <a href='{% url 'todos:new' %}'>할 일 생성</a>
+    <hr>
+    {% for todo in todos %}
+        <a href='{% url 'todos:detail' todo.pk %}'>pk - {{ todo.pk }}</a>
+        {% if todo.completed != True %}
+            <p>완료 상태 - False</p>
+            <a href='{% url 'todos:complete' todo.pk %}'>완료하기</a>
+        {% else %}
+        <p>완료 상태 - True</p>
+        <a href='{% url 'todos:complete' todo.pk %}'>완료 취소</a>
+        {% endif %}
+        <hr>
+    {% endfor %}
+{% endblock content %}
