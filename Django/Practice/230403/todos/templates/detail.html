@@ -1,0 +1,15 @@
+{% block content %}
+    <h2>DETAIL</h2>
+    <p>할 일 제목: {{ todo.title }}</p>
+    <p>할 일 내용: {{ todo.content }} </p>
+    <p>완료 여부: {{ todo.completed }} </p>
+    <p>우선순위: {{ todo.priority }} </p>
+    <p>생성 날짜: {{ todo.created_at }} </p>
+    <p>마감 기한: {{ todo.deadline }} </p>
+    <hr>
+    <a href='{% url 'todos:index' %}'>홈으로</a>
+    <br>
+    <a href='{% url 'todos:update' todo.pk %}'>수정하기</a>
+    <br>
+    <a href='{% url 'todos:delete' todo.pk %}'>삭제하기</a>
+{% endblock content %}

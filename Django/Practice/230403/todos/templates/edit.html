@@ -1,0 +1,10 @@
+{% block content %}
+    <h2>EDIT</h2>
+    <form action="{% url 'todos:update' todo.pk %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type = "submit">
+    </form>
+    <hr>
+    <a href='{% url 'todos:index' %}'>홈으로</a>
+{% endblock content %}

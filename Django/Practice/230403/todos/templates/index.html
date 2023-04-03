@@ -1,0 +1,9 @@
+{% block content %}
+    <h2>HOME</h2>
+    <a href='{% url 'todos:create' %}'>할 일 생성</a>
+    <hr>
+    {% for todo in todos %}
+        <a href='{% url 'todos:detail' todo.pk %}'>{{ forloop.counter }} 번째 할 일</a>
+        <br>
+    {% endfor %}
+{% endblock content %}
