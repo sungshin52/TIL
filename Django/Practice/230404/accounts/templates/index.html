@@ -1,0 +1,14 @@
+<h1>사용자 정보</h1>
+
+<h3>{{ user }}</h3>
+
+{% if user.is_authenticated %}
+    <form action='{% url 'accounts:logout' %}' method='POST'>
+        {% csrf_token %}
+        <input type='submit' value='Logout'>
+    </form>
+
+{% else %}
+    <a href='{% url 'accounts:login' %}'>Login</a>
+    
+{% endif %}
