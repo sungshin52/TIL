@@ -1,0 +1,28 @@
+<h1>사용자 정보</h1>
+
+<h3>Hello, {{ user }}</h3>
+
+{% if request.user.is_authenticated %}
+    <h5>Username: {{ user.username }}</h5>
+    <h5>Email: {{ user.email }}</h5>
+    <h5>First name: {{ user.first_name }}</h5>
+    <h5>Last name: {{ user.last_name }}</h5>
+
+    <form action='{% url 'accounts:logout' %}' method='POST'>
+        {% csrf_token %}
+        <input type='submit' value='Logout'>
+    </form>
+
+    <form action='{% url 'accounts:delete' %}' method='POST'>
+        {% csrf_token %}
+        <input type='submit' value='Signout'>
+    </form>
+
+    <a href='{% url 'accounts:update' %}'>회원 정보 수정</a>
+
+{% else %}
+    <a href='{% url 'accounts:login' %}'>Login</a>
+    <br>
+    <a href='{% url 'accounts:signup' %}'>Signup</a>
+
+{% endif %}
