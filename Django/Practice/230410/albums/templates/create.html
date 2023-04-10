@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="modal fade" id="share" tabindex="-1" aria-labelledby="ImageUpload" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class='modal-header'>
+            <h5 class='modal-title'>이미지 공유 폼</h5>
+        </div>
+        <div class="modal-body">
+            <form action='{% url 'albums:create' %}' method='POST' enctype='multipart/form-data'>
+                {% csrf_token %}
+                {{ form.as_p }}
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary justify-content-end">공유하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
